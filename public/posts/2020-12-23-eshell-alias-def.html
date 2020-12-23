@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Doom Emacs adicionando novos aliases no Eshell</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Joao Souza" />
+<link rel="stylesheet" type="text/css" href="../css/stylesheet.css"/><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+<div id="preamble" class="status">
+<header>
+    <a class="header-link" href="https://jsouza.xyz">João Souza</a>
+</header>
+</div>
+<div id="content">
+<h1 class="title">Doom Emacs adicionando novos aliases no Eshell</h1>
+
+<div id="outline-container-org1ea0746" class="outline-2">
+<h2 id="org1ea0746">Introdução</h2>
+<div class="outline-text-2" id="text-org1ea0746">
+<p>
+Há pouco tempo comecei a estudar a linguagem de programação Clojure e a comunidade recomenda fortemente o uso de Emacs + Cider para trabalhar com a linguagem e comecei a aprender a trabalhar com esse editor, realmente é um pouco estranho para quem está acostumado a usar ferramentas como IntelliJ ou Visual Studio Code para editar o próprio código, porém, quando você começa a se habituar e conhecer os diversos plugins disponíveis para o Emacs o esforço de aprender acaba valendo a pena, um dos plugins utilizados é o Eshell.
+</p>
+
+<p>
+O Eshell é um command shell escrito em Emacs Lisp, a vantagem de usá-lo e que não preciso ficar alternando entre emacs e shell, porém quando comecei eu demorei um pouco para aprender como definir novos aliases, então decidi criar esse post.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf053d3" class="outline-2">
+<h2 id="orgbf053d3">Como definir um novo alias</h2>
+<div class="outline-text-2" id="text-orgbf053d3">
+<p>
+Para definir um novo alias precisamos abrir o arquivo <b>~/.doom.d/config.el</b> e usar a função <b>set-eshell-alias!</b> que recebe dois argumentos <i>alias</i> e <i>comando</i>, para ficar mais claro vamos criar um alias de exemplo, o alias que vamos criar vai se chamar "hi" e sua função será imprimir uma saudação como <b>Olá, &lt;nome fornecido&gt;</b>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #4078f2;">(</span><span style="color: #a626a4;">set-eshell-alias!</span> <span style="color: #50a14f;">"hi"</span> <span style="color: #50a14f;">"echo \"Ol&#225;, $1\" "</span><span style="color: #4078f2;">)</span>
+</pre>
+</div>
+
+<p>
+Agora basta recarregarmos o Emacs através do comando <b>SPC h r r</b>, para testarmos podemos abrir o Eshel através do <b>SPC o e</b> e digitarmos "hi Joao" devemos ver a mensagem "Olá, Joao".
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51fe689" class="outline-2">
+<h2 id="org51fe689">Conclusão</h2>
+<div class="outline-text-2" id="text-org51fe689">
+<p>
+Sempre que precisarmos adicionar um novo alias podemos seguir os passos acima.
+</p>
+
+<p>
+Escrito em: 23/12/2020
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<footer>
+    <div class="links">
+        <a href="mailto:jhsouza93@gmail.com" target="_blank"><i class="fas fa-envelope-square fa-3x"></i></a>
+        <a href="https://github.com/sjoaohenrique" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
+        <a href="https://www.linkedin.com/in/jo%C3%A3o-henrique-de-souza-5523214b/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+    </div>
+    <p>João Souza * 2020</p>
+</footer>
+</div>
+</body>
+</html>

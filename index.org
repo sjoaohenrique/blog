@@ -1,0 +1,12 @@
+#+title: Sobre mim
+#+setupfile: org-template/template.org
+
+Atualmente estou tabalhando como desenvolvedor Full Stack para a empresa [[https://accurate.com.br/][Accurate Software]].Formado em Análise e Desenvolvimento de Sistemas na [[http://www.fatecriopreto.edu.br/][FATEC Rio Preto]] onde ao egressar no primeiro semestre de 2014 tive o prazer de receber uma premiação do [[http://www.fatecriopreto.edu.br/graduado/melhor-projeto-de-graduacao][melhor projeto de graduação]], gosto muito de música e tenho dois filhos o Joaquim e do Francisco.Estou constantemente aprendendo novas linguages, ferramentas e técnincas de desenvolvimento de software e sempre que possível passo um tempo personalizando meu Emacs :).
+
+A intenção desse blog além de registrar o que estou aprendendo é compartilhar conhecimento, caso queira entrar em contato no rodapé da página estarão os links para as minhas redes sociais e e-mail.
+
+#+BEGIN_posts
+Posts
+#+END_posts
+
+    [[file:posts/2020-12-23-eshell-alias-def.org][Doom Emacs adicionando novos aliases no Eshell]]

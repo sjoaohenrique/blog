@@ -1,0 +1,46 @@
+body {
+    background-color: #F2E9E4;
+    margin: 5% 10% 0 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding-bottom: 2%;
+    text-align: center;
+    border-bottom: 1px dashed #4A4E69;
+}
+
+.header-link {
+    font-size: 35px;
+    text-decoration: none;
+    color: #4A4E69;
+}
+
+h1 {
+    font-weight: 100;
+    margin-top: 5%;
+    color: #22223B;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #22223B;
+}
+
+.posts p {
+    font-size: 32px;
+    font-weight: 100;
+}
+
+footer {
+    text-align: center;
+    bottom: 0;
+    width: 80%;
+    padding-top: 2%;
+    border-top: 1px dashed #4A4E59;
+}
+
+.links a {
+    color: #22223B;
+    margin: 0 1% 0 0;
+}

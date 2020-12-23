@@ -1,0 +1,24 @@
+#+title: Doom Emacs adicionando novos aliases no Eshell
+#+setupfile: ../org-template/post-template.org
+
+* Introdução
+
+Há pouco tempo comecei a estudar a linguagem de programação Clojure e a comunidade recomenda fortemente o uso de Emacs + Cider para trabalhar com a linguagem e comecei a aprender a trabalhar com esse editor, realmente é um pouco estranho para quem está acostumado a usar ferramentas como IntelliJ ou Visual Studio Code para editar o próprio código, porém, quando você começa a se habituar e conhecer os diversos plugins disponíveis para o Emacs o esforço de aprender acaba valendo a pena, um dos plugins utilizados é o Eshell.
+
+O Eshell é um command shell escrito em Emacs Lisp, a vantagem de usá-lo e que não preciso ficar alternando entre emacs e shell, porém quando comecei eu demorei um pouco para aprender como definir novos aliases, então decidi criar esse post.
+
+* Como definir um novo alias
+
+Para definir um novo alias precisamos abrir o arquivo *~/.doom.d/config.el* e usar a função *set-eshell-alias!* que recebe dois argumentos /alias/ e /comando/, para ficar mais claro vamos criar um alias de exemplo, o alias que vamos criar vai se chamar "hi" e sua função será imprimir uma saudação como *Olá, <nome fornecido>*:
+
+#+BEGIN_SRC emacs-lisp
+(set-eshell-alias! "hi" "echo \"Olá, $1\" ")
+#+END_SRC
+
+Agora basta recarregarmos o Emacs através do comando *SPC h r r*, para testarmos podemos abrir o Eshel através do *SPC o e* e digitarmos "hi Joao" devemos ver a mensagem "Olá, Joao".
+
+* Conclusão
+
+Sempre que precisarmos adicionar um novo alias podemos seguir os passos acima.
+
+Escrito em: 23/12/2020
